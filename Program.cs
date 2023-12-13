@@ -4,9 +4,9 @@
     {
         static void Main(string[] args)
         {
-            bool a = true;
-            char[] vocales = { 'a', 'e', 'i', 'o', 'u' };
-            char[] fvocales = { 'a', 'c', 'i', 'a', 'a' };
+            bool a = false;
+            char[] vocales = { 'a', 'c', 'i', 'o', 'u' };
+            char[] fvocales = { 'a', 'e', 'i', 'a', 'a' };
              
              for (int i = 0; i < vocales.Length; i++)
              {
@@ -14,11 +14,11 @@
                  {
                     if (vocales[i] != fvocales[j])
                     {
-                       a = false;
+                       a = true;
                        break;
                     }     
                  }
-                 if (a) 
+                 if (!a) 
                  {
                     Console.WriteLine(i + " " + vocales[i]);
                  }
