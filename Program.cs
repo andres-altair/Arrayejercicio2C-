@@ -7,20 +7,22 @@
             bool a = true;
             char[] vocales = { 'a', 'e', 'i', 'o', 'u' };
             char[] fvocales = { 'a', 'c', 'i', 'a', 'a' };
-            if (a) 
-            {
-                for (int i = 0; i < vocales.Length; i++)
-                {
-                    for (int j = 0; j < fvocales.Length; j++)
+             
+             for (int i = 0; i < vocales.Length; i++)
+             {
+                 for (int j = 0; j < fvocales.Length; j++)
+                 {
+                    if (vocales[i] != fvocales[j])
                     {
-                        if (vocales != fvocales)
-                        {
-                            a = false;
-                            break;
-                        }
-                    }
-                } 
-            } 
+                       a = false;
+                       break;
+                    }     
+                 }
+                 if (a) 
+                 {
+                    Console.WriteLine(i + " " + vocales[i]);
+                 }
+             }
         }
     }
 }
